@@ -14,12 +14,10 @@ import pandas as pd
 DATA_COLS = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19",
              "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "target"]
 window = 5
-features = 1
-HZ = 11
-XYZ = 3
-look_back = window * HZ
+features = 10
+HZ = 44
 
-#3867
+look_back = window * HZ
 
 def loadFiles(path):
     l = [pd.read_csv(filename, names=DATA_COLS) for filename in glob.glob("..//data//" + str(path) + "//*.csv")]
@@ -72,7 +70,7 @@ def defineWindowY(values):
     start = 1
     # HZ * features * XYZ
     for i in range(loop):
-        calc = int(values.shape[0] / loop)
+        calc = HZ * features
         if (start) < len(values):
             v = values[start: (i + 1) * calc - 1, 34][0]
             teste.append(v)
@@ -106,16 +104,15 @@ testX = defineWindowX(test)
 testX = np.dstack(testX)
 testY = defineWindowY(test)
 
-verbose, epochs, batch_size = 1, 15, 64
 n_timesteps, n_features, n_outputs = trainX.shape[1], trainX.shape[2], 1
 callback = tf.keras.callbacks.EarlyStopping(monitor='loss', patience=10)
 
 model = Sequential()
 model.add(LSTM(16, return_sequences=True, input_shape=(n_timesteps, n_features)))
-model.add(LSTM(units=8, return_sequences=True, dropout=0.5))
+model.add(LSTM(units=16, return_sequences=True, dropout=0.2))
 model.add(LSTM(units=8, dropout=0.5))
-model.add(Dense(units=25, activation="relu"))
-model.add(Dense(units=1))
+model.add(Dense(units=100, activation="relu"))
+model.add(Dense(units=1, activation="sigmoid"))
 
 model.compile(optimizer='adam', loss='categorical_hinge', metrics=['accuracy'])
 
@@ -123,14 +120,16 @@ print(model.summary())
 
 history = model.fit(x=trainX,
                         y=trainY,
-                        batch_size=1,
-                        epochs=100,
-                        verbose=verbose,
+                        batch_size=300,
+                        epochs=400,
+                        verbose=1,
                         callbacks=[callback],
                         validation_data=(testX, testY),
                         shuffle=True
                         )
 
+
+print(model.predict(testX))
 
 pyplot.plot(history.history['loss'])
 pyplot.plot(history.history['val_loss'])
