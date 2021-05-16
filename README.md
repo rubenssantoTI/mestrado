@@ -8,4 +8,6 @@
 
 4 - Pasta `posetnet` contêm arquivos responsáveis por gerar os pontos de referência do corpo humano a partir de imagens.
 
+5 - Pasta `AMP` contêm todos os arquivos referentes as técnicas de aprendizado de máquina profundo
+
 
