@@ -1,4 +1,4 @@
-"# mestrado" 
+"# Neste repositório contem dados e códigos utilizados para realizar o reconhecimento de atividades humanas utilizando técnicas de Aprendizado de máquina a aprendizado de máquina profundo, como: KNN, SVM, GRU e LSTM" 
 
 1 - Pasta `AM` contem todos os arquivos referentes as técnicas de aprendizado de máquina
 
