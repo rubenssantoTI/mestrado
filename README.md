@@ -6,4 +6,6 @@
 
 3 - Pasta `opencv` contem arquivos que gera imagens a partir do video.mp4
 
+4 - Pasta `posetnet` contem arquivos responsável por gerar os pontos de referência do corpo humano a partir de imagens.
+
 
