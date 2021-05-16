@@ -4,4 +4,6 @@
 
 2 - Pasta `dataset` contem os dados extraídos das imagens
 
+3 - Pasta `opencv` contem arquivos que gera imagens a partir do video.mp4
+
 
