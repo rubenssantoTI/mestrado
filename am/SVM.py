@@ -51,16 +51,4 @@ with tf.device('/GPU:1'):
     y_pred = model.predict(X_test)
     print_result(y_test, y_pred)
 
-    from mlxtend.evaluate import confusion_matrix
-    from mlxtend.plotting import plot_confusion_matrix
-
-
-    cm = confusion_matrix(y_target=y_test,
-                          y_predicted=y_pred,
-                          binary=False,
-                          positive_label=1)
-
-
-    fig, ax = plot_confusion_matrix(conf_mat=cm)
-    plt.savefig('60_S_SVM')
-    plt.show()
+   

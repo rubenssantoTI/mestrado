@@ -58,7 +58,7 @@ with tf.device('/GPU:1'):
 
 y_pred = classificador(X_train, y_train, X_test)
 
-# Cria a matriz confusão
+
 printResult(y_test, y_pred)
 
 
