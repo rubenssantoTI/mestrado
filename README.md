@@ -5,7 +5,7 @@ O reconhecimento da atividade humana é um campo de pesquisa recente e ativo em 
 
 
 
-"# Neste repositório contêm dados e códigos utilizados para realizar o reconhecimento de atividades humanas utilizando técnicas de Aprendizado de máquina e aprendizado de máquina profundo, como: KNN, SVM, GRU e LSTM" 
+"Neste repositório contêm dados e códigos utilizados para realizar o reconhecimento de atividades humanas utilizando técnicas de Aprendizado de máquina e aprendizado de máquina profundo, como: KNN, SVM, GRU e LSTM" 
 
 ## Diretórios
 
