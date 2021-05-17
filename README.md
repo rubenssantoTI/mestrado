@@ -7,14 +7,14 @@ O reconhecimento da atividade humana é um campo de pesquisa recente e ativo em 
 
 ## Diretórios
 
--(1) Pasta `AM` contêm todos os arquivos referentes as técnicas de aprendizado de máquina
+- (1) Pasta `AM` contêm todos os arquivos referentes as técnicas de aprendizado de máquina
 
--(2) Pasta `dataset` contêm os dados extraídos das imagens
+- (2) Pasta `dataset` contêm os dados extraídos das imagens
 
--(3) Pasta `opencv` contêm arquivos que gera imagens a partir do video.mp4
+- (3) Pasta `opencv` contêm arquivos que gera imagens a partir do video.mp4
 
--(4) Pasta `posetnet` contêm arquivos responsáveis por gerar os pontos de referência do corpo humano a partir de imagens.
+- (4) Pasta `posetnet` contêm arquivos responsáveis por gerar os pontos de referência do corpo humano a partir de imagens.
 
--(5) Pasta `AMP` contêm todos os arquivos referentes as técnicas de aprendizado de máquina profundo
+- (5) Pasta `AMP` contêm todos os arquivos referentes as técnicas de aprendizado de máquina profundo
 
 
